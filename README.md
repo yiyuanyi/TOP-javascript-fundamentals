@@ -11,7 +11,13 @@ It has also reminded me to keep my code as simple as possible, as quite often I 
 
 -- Fundamentals 5 --
 Several were fine, with some being frustrating one night but then solvable after leaving it for a day. 
-Struggling with the Caesar one and Fibonnacci also looks hard. Update when all are completed.
+Struggling with the Caesar one and Fibonacci also looks hard. Update when all are completed.
 
 Try not to overcomplicate things. Write it the simplest way first, then modify it after.
+
+Got fibonacci working after googling.
+
+Caesar was very hard, couldn't get it to work with my own assigned array so used unicode instead.
+Required help from TOP discord to sort out the punctuation problem and then looked at previous peoples questions for the wrap and large number shifts.
+Code works fine, is rather long and uneloquent. Will update it soon to make it shorter/more readable as many repeated statements in the if () sections.
 
