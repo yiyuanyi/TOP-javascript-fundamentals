@@ -11,8 +11,20 @@ const caesar = function(str, num) {
 
         let shiftedCharCode;
 
-        if (65 <= charCode <= 90 || 97 <= charCode <= 122) {
+        if (65 <= charCode && charCode <= 90 && num > 25|| 97 <= charCode && charCode <= 122 && num > 25) {
+            shiftedCharCode = (num % 26) + charCode - 26;
+        } else if (97 <= charCode && charCode <= 122 && num < -25 || 65 <= charCode && charCode <= 90 && num < -25) {
+            shiftedCharCode = (num % 26) + charCode;
+        } else if (65 <= charCode && charCode <= 90 || 97 <= charCode && charCode <= 122) {
             shiftedCharCode = charCode + num;
+        } else {
+            shiftedCharCode = charCode;
+        };
+
+        if (65 <= charCode && charCode <= 90 && shiftedCharCode < 65 || 97 <= charCode && charCode <= 122 && shiftedCharCode < 97) {
+            shiftedCharCode = shiftedCharCode + 26;
+        } else if (65 <= charCode && charCode <= 90 && shiftedCharCode > 90 || 97 <= charCode && charCode <= 122 && shiftedCharCode > 122) {
+            shiftedCharCode = shiftedCharCode - 26;
         }
         
         shiftedArr.push(shiftedCharCode);
@@ -33,3 +45,6 @@ module.exports = caesar
 //return shifted str character
 //join shifted str together
 //return joint shifted str
+
+// shiftedCharCode = (num % 26) + charCode - 26;
+
